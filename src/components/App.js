@@ -28,7 +28,7 @@ class App extends React.Component {
 
   }
 
-  onChangeType = event => {
+  onChangeType = (event) => {
     this.setState({
       filters: {
         ...this.state.filters,
@@ -37,7 +37,7 @@ class App extends React.Component {
     })
   }
 
-  onAdoptPet = petId => {
+  onAdoptPet = (petId) => {
     const pets = this.state.pets.map(pet => {
       return pet.id === petId ? {...pet, isAdopted: true} : pet
     })
